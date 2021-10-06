@@ -2,25 +2,28 @@ package view;
 
 import java.util.Scanner;
 
+import model.Nota;
+
 public class Lista {
 
+	
 	public static void main(String[] args) {
+
+		Nota[] lista = new Nota[10];
 		
-		Scanner sc = new Scanner(System.in);
-		String risposta = null;
 		
-		for (int i = 0; i < 3; i++) {
-			System.out.println("Cosa vuoi comprare?");
-			risposta = sc.nextLine();
-			if (risposta.equals("pane")) {
-				System.out.println("il pane c'è già");
-			} else {
-			System.out.println("Hai detto che vuoi comprare: ");
-			System.out.println(risposta);
-			}
+		lista[0] = new Nota();
+		lista[0].descrizione = "pane";
+		lista[0].completa();
+
+		lista[1] = new Nota();
+		lista[1].descrizione = "latte";
+		//lista[1].completa();
+
+		for (int i = 0; i < lista.length; i++) {
+			if (lista[i] != null)
+				System.out.println(lista[i].stampa());
 		}
-		
-		
 		
 		
 	}
