@@ -15,10 +15,6 @@ public class TavolaPitagorica {
 			
 		}
 		
-		
-		
-		
-		
 	}
 	
 	

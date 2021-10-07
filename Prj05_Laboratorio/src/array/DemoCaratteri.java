@@ -6,16 +6,16 @@ public class DemoCaratteri {
 		
 		char c = 65;
 
-		for (int i = 0; i < 10000; i++) {
-			System.out.print("" + i + ((char) i) + '\t');
-			if(i%15 == 0)
+		for (int i = 0; i < 1000; i++) {
+			System.out.print("" +  ((char) i) + '\t');
+			if(i%5 == 0)
 				System.out.println();
 		}
 		
-		char[] caratteri = {'h', 'e', 'l', 'l', 'o'};
-		for (int i = 0; i < caratteri.length; i++) {
-			System.out.print(caratteri[i]);
-		}
+//		char[] caratteri = {'h', 'e', 'l', 'l', 'o'};
+//		for (int i = 0; i < caratteri.length; i++) {
+//			System.out.print(caratteri[i]);
+//		}
 	}
 
 }

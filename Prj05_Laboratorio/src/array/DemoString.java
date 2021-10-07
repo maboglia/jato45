@@ -27,6 +27,7 @@ public class DemoString {
 		
 		String html = "<ul>";
 		
+				
 		for (String giorno : settimana) {
 			
 			html += "<li>" + giorno.toUpperCase() + "</li>";

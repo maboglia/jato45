@@ -12,14 +12,12 @@ public class Lista {
 		Nota[] lista = new Nota[10];
 		
 		
-		lista[0] = new Nota();
-		lista[0].descrizione = "pane";
+		lista[0] = new Nota("pane");
+		
 		lista[0].completa();
 
-		lista[1] = new Nota();
-		lista[1].descrizione = "latte";
-		//lista[1].completa();
-
+		lista[1] = new Nota("latte");
+		
 		stampaLista(lista);
 		
 		
