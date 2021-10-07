@@ -15,9 +15,27 @@ public class DemoString {
 //		System.out.println(s1.equalsIgnoreCase(s5) );
 //		
 
+		String[] settimana = {
+				"lunedì",
+				"martedì",
+				"mercoledì",
+				"giovedì",
+				"venerdì",
+				"sabato",
+				"domenica",
+		};
 		
+		String html = "<ul>";
 		
+		for (String giorno : settimana) {
+			
+			html += "<li>" + giorno.toUpperCase() + "</li>";
+			
+		}
 		
+		html += "</ul>";
+		
+		System.out.println(html);
 		
 	}
 

@@ -1,4 +1,4 @@
-package gioco;
+package giochini;
 
 public class Scarabocchi {
 
