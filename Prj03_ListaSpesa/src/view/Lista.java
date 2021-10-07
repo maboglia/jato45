@@ -20,12 +20,18 @@ public class Lista {
 		lista[1].descrizione = "latte";
 		//lista[1].completa();
 
+		stampaLista(lista);
+		
+		
+	}
+
+	private static void stampaLista(Nota[] lista) {
+		//metodo per stampare il contenuto della lista
 		for (int i = 0; i < lista.length; i++) {
-			if (lista[i] != null)
+			if (lista[i] != null) {
 				System.out.println(lista[i].stampa());
+			}
 		}
-		
-		
 	}
 
 }
