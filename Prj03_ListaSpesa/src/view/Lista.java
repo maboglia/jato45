@@ -38,10 +38,13 @@ public class Lista {
 					taccuinoRosso = new Note(5);
 				} 
 				if (scelta == 'b') {
-					taccuinoRosso.addNota("pane", 0);;
+					String testo = testoNota();
+					int posizione = posizNota();
+					taccuinoRosso.addNota(testo, posizione);
 				} 
 				if (scelta == 'c') {
-					//taccuinoRosso.completaNota(0);
+					int posizione = posizNota();
+					taccuinoRosso.completaNota(0);
 				} 
 				if (scelta == 'd') {
 					taccuinoRosso.stampaLista();
@@ -56,6 +59,22 @@ public class Lista {
 	
 	}
 
+	private static int posizNota() {
+		System.out.println("Inserisci la posizione della nota");
+		Scanner sc = new Scanner(System.in);
+		int risposta = sc.nextInt();
+		//sc.close();
+		return risposta;
+	}
+
+	private static String testoNota() {
+		System.out.println("Inserisci il testo della nota");
+		Scanner sc = new Scanner(System.in);
+		String risposta = sc.nextLine();
+		//sc.close();
+		return risposta;
+	}
+
 	private static char askUser() {
 		System.out.println("---------------------");
 		System.out.println("Scegli un'operazione");
@@ -67,6 +86,7 @@ public class Lista {
 		System.out.println("---------------------");
 		Scanner sc = new Scanner(System.in);
 		char risposta = sc.nextLine().charAt(0);
+//		sc.close();
 		return risposta;
 	}
 	

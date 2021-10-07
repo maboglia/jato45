@@ -23,6 +23,11 @@ public class Note {
 				System.out.println(notes[i].stampa());
 			}
 		}
+	}
+
+	public void completaNota(int i) {
+		notes[i].completa();
+		System.out.println("Nota completata");
 	}	
 	
 }
