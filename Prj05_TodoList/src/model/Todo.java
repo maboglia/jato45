@@ -13,8 +13,15 @@ public class Todo {
 		String commento = "Oggetto Todo costruito!";
 		done = false;
 		description = desc;
-		System.out.println(commento + description);
+		System.out.println(commento);
 	}
 	
-	
+	public String toString() {
+		return "**************"
+				+ "\n Nota \n"
+				+ description
+				+ "\n"
+				+ "**************";
+				
+	}
 }
