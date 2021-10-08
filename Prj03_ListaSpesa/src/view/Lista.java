@@ -44,7 +44,7 @@ public class Lista {
 				} 
 				if (scelta == 'c') {
 					int posizione = posizNota();
-					taccuinoRosso.completaNota(0);
+					taccuinoRosso.completaNota(posizione);
 				} 
 				if (scelta == 'd') {
 					taccuinoRosso.stampaLista();

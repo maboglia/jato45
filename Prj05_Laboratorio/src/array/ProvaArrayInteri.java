@@ -5,8 +5,8 @@ public class ProvaArrayInteri {
 	public static void main(String[] args) {
 
 		//inizializza 1
-		
 		int[] voti = new int[5];
+		voti[0] =  3;
 	
 		//inizializza 2
 		int[] voti2 = {10,6,8,4,2};
