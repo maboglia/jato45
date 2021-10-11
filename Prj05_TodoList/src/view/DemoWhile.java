@@ -12,7 +12,7 @@ public class DemoWhile {
 		while (condition) {
 			
 			System.out.println("Cosa vuoi fare?");
-			String risposta = sc.nextLine();
+			String risposta = DemoWhile.sc.nextLine();
 			
 			if (risposta.equals("exit")) {
 				condition = false;
