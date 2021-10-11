@@ -6,5 +6,4 @@ public class CalcolatriceStatica {
 		return a + b;
 	}
 	
-	
 }
