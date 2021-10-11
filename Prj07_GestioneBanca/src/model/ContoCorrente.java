@@ -3,17 +3,21 @@ package model;
 public class ContoCorrente {
 
 	private static int numeratoreConti = 10000;
-	private int numeroConto;
-	private String nomeCliente;
+	private String numeroConto;
+	private Cliente cliente;
 	private double saldo;
 	
-	public ContoCorrente(String nome) {
+	public ContoCorrente(Cliente nome) {
 		saldo = 0.0;
-		nomeCliente = nome;
-		numeroConto = numeratoreConti++;
+		cliente = nome;
+		numeroConto = "000000" + numeratoreConti++;
 	}
 	
-	public int dammiNumeroConto() {
+	public Cliente getCliente() {
+		return cliente;
+	}
+	
+	public String dammiNumeroConto() {
 		return numeroConto;
 	}
 	
