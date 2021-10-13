@@ -17,10 +17,6 @@ public class Gestione {
 		bc.reportClienti();
 		bc.reportConti();
 		
-		
-		
-		
-
 	}
 
 }
