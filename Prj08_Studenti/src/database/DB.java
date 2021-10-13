@@ -3,11 +3,11 @@ package database;
 public class DB {
 
 	String[][] studenti = {
-			{"ALBERTO","PAGANO"},
+			{"ALBERTO","PAGANO"},//00
 			{"ALESSANDRO","BASTIANONI"},
 			{"ALESSANDRO","BERRUTI"},
 			{"ALESSANDRO","UCCELLI"},
-			{"ALESSIO","MAGAZZU"},'
+			{"ALESSIO","MAGAZZU"},
 			{"ALESSIO","TURCHETTI"},
 			{"ALEXANDRA","TRONCIU"},
 			{"ALI","HAGHIGHIPOUR"},
@@ -21,7 +21,6 @@ public class DB {
 			{"GABRIELE","MARZANO"},
 			{"GAZMOR","HOXHA"},
 			{"GIORGIO","DEPETRIS"},
-			{"ILARIA","DE"}, MURO
 			{"JOSEPH","PIZZIMENTI"},
 			{"LUCA","ZAVATTARO"},
 			{"LUCIA","LIU"},
