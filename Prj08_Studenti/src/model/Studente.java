@@ -18,7 +18,9 @@ public class Studente {
 		this.eta = 25;
 	}
 	
-
+	public String getCognome() {
+		return this.cognome;
+	}
 	
 	
 }

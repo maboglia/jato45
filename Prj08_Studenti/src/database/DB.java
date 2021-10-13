@@ -2,7 +2,7 @@ package database;
 
 public class DB {
 
-	String[][] studenti = {
+	public static final String[][] STUDENTI = {
 			{"ALBERTO","PAGANO"},//00
 			{"ALESSANDRO","BASTIANONI"},
 			{"ALESSANDRO","BERRUTI"},
