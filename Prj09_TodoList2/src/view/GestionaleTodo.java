@@ -25,7 +25,6 @@ public class GestionaleTodo {
 		
 		for (Todo nota : ctrl.getCoseDaFare()) {
 			System.out.println(nota);
-			
 		}
 		
 		
