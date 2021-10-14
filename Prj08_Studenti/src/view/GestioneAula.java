@@ -19,7 +19,7 @@ public class GestioneAula {
 		
 		for (Studente s : controller.getRegistro()) {
 			System.out.print ("E' presente lo studente ");
-			System.out.println(s.getCognome() + "?");
+			System.out.println(s + "?");
 			
 			String risposta = sc.nextLine();
 			
