@@ -15,7 +15,7 @@ public class GestionePizze {
 		this.pizze = new ArrayList<Pizza>();
 	}
 	
-	private void initMenu() {
+	public void initMenu() {
 		
 		File elenco = new File("pizze/pizze-tegamino.txt");
 		try {
@@ -33,15 +33,9 @@ public class GestionePizze {
 				//aggiungo al contenitore
 				this.pizze.add(pizza);
 			}
-			
-			
-			
-			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
 	

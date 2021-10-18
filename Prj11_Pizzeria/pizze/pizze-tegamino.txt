@@ -1,5 +1,5 @@
 Brie, 5.5, brie, tegamino
-Cipolle, 5,cipolle, tegamino
+Cipolle, 5, cipolle, tegamino
 Capperi, 5.8, capperi, tegamino
 Diavola, 6.5, salamino piccante, tegamino
 Funghi, 7.5, porcini, tegamino
