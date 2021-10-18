@@ -1,0 +1,7 @@
+Brie, 6.5, brie, mattone
+Cipolle, 8, cipolle-origano, mattone
+Capperi, 9, capperi, mattone
+Diavola, 7.5, salamino piccante, mattone
+Funghi, 8.5, porcini, mattone
+Gorgonzola, 9, gorgo, mattone
+Greca, 9.5, olive, mattone

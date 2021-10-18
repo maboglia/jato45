@@ -15,9 +15,10 @@ public class GestionePizze {
 		this.pizze = new ArrayList<Pizza>();
 	}
 	
-	public void initMenu() {
+	public void initMenu(String nomeFile) {
 		
-		File elenco = new File("pizze/pizze-tegamino.txt");
+		File elenco = new File(nomeFile);
+		this.pizze.clear();
 		try {
 			Scanner sc = new Scanner(elenco);
 			
