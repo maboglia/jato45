@@ -23,3 +23,9 @@
 hs_err_pid*
 /.metadata/
 jato45.csv
+
+*.settings
+/Servers/
+*.MF
+*.classpath
+*.project
