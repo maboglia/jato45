@@ -9,8 +9,8 @@ public class AnagraficaConti {
 
 	private static ArrayList<ContoCorrente> conti = new ArrayList<>();
 	
-	public void addConto(ContoCorrente cc) {
-		this.conti.add(cc);
+	public static void addConto(ContoCorrente cc) {
+		conti.add(cc);
 		System.out.println("conto aggiunto");
 	}
 	
