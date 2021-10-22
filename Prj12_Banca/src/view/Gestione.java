@@ -3,6 +3,7 @@ package view;
 import java.util.ArrayList;
 
 import controller.AnagraficaCliente;
+import controller.BancaPippo;
 import controller.Filiale;
 import model.Cliente;
 import model.ContoCorrente;
@@ -38,6 +39,8 @@ public class Gestione {
 //		
 //		System.out.println(cc1.stampaTitolari());
 //		System.out.println(cc2.stampaTitolari());
+		
+		BancaPippo bp = new BancaPippo();
 		
 		Filiale viaRoma = new Filiale("viaRoma");
 		Filiale viaPo = new Filiale("viaPo");
