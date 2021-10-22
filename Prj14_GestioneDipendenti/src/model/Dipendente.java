@@ -18,7 +18,9 @@ public class Dipendente {
 		return "Dipendente [nome=" + nome + ", matricola=" + matricola + "]";
 	}
 	
-	
+	public double calcolaPaga() {
+		return 0;
+	}
 	
 	
 }
