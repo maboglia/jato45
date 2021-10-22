@@ -1,6 +1,6 @@
 package model;
 
-public class Punto {
+public class Punto extends Object{
 
 	private int x, y;
 

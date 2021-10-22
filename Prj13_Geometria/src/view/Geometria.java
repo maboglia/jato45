@@ -2,6 +2,8 @@ package view;
 
 
 import model.Punto;
+import model.Quadrato;
+import model.Rettangolo;
 import model.Segmento;
 import model.Triangolo;
 
@@ -19,8 +21,14 @@ public class Geometria {
 		Segmento ac = new Segmento(a, c);
 		
 		Triangolo t = new Triangolo(a, b, c);
-		System.out.println(t.perimetro());
-		System.out.println(t.area());
+		
+		Rettangolo r = new Rettangolo(ab, bc);
+		System.out.println(r.perimetro());
+		System.out.println(r.area());
+		
+		Quadrato q = new Quadrato(ab);
+		System.out.println(q.perimetro());
+		System.out.println(q.area());
 		
 	}
 	
