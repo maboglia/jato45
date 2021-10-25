@@ -15,4 +15,14 @@ public class UtenteCtrl {
 	
 	}
 	
+	public boolean login(String user, String passw) {
+		for (Utente utente : utenti) {
+			if(utente.getUsername().equals(user) && utente.getPassword().equals(passw)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 }
