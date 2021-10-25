@@ -19,7 +19,7 @@ request.getParameter("password")!=null
 
 <% } else { %>
 
-	<form method="post">
+	<form method="post" action="gatti">
 		<input type="text" name="username" placeholder="username">
 		<br>
 		<input type="password" name="password" placeholder="password">
