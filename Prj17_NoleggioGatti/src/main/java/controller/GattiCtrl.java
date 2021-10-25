@@ -21,13 +21,8 @@ public class GattiCtrl extends HttpServlet {
 		
 		ArrayList<Gatto> elenco =  gatti.getGatti();
 		
-		StringBuilder sb = new StringBuilder();
-		
-		for (Gatto gatto : elenco) {
-			sb.append(gatto.getNome());
-		}
-		
-		response.getWriter().append(sb.toString());
+		request.setAttribute("elenco", elenco);
+		request.getRequestDispatcher("elenco_gatti.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
