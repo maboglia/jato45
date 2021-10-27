@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,6 +25,9 @@ public class Panini extends HttpServlet {
 	request.getRequestDispatcher("header.jsp").include(request, response);
 	request.getRequestDispatcher("menu.jsp").include(request, response);
 	request.setAttribute("titolo", "Panini");
+	ArrayList<String> panini = new ArrayList<>();
+	panini.add("hamburger");panini.add("cheeseburger");panini.add("fishburger");
+	request.setAttribute("prodotti", panini);
 	request.getRequestDispatcher("content.jsp").include(request, response);
 	request.getRequestDispatcher("footer.jsp").include(request, response);
 	

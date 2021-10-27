@@ -1,11 +1,21 @@
+<%@page import="java.util.ArrayList"%>
 <h1>${titolo}</h1>
 <table>
   <tr>
-    <th>Column 1 Heading</th>
-    <th>Column 2 Heading</th>
+    <th>Prodotto</th>
+    <th>Azione</th>
   </tr>
+  
+  <% 
+  ArrayList<String> prodotti = (ArrayList<String>) request.getAttribute("prodotti");
+  
+  for (String p : prodotti){
+  %>
+  
   <tr>
-    <td>Row 1: Col 1</td>
-    <td>Row 1: Col 2</td>
+    <td><%= p %></td>
+    <td><a href="">compra</a></td>
   </tr>
+  
+  <% } %>
 </table>

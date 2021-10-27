@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Junk Food</title>
+<link rel="stylesheet" href="stile.css">
 </head>
 <body>
 
