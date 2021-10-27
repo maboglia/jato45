@@ -1,6 +1,6 @@
 package model;
 
-public class Dipendente {
+public abstract class Dipendente {
 
 	private static int matricolatore = 1;
 	
@@ -18,9 +18,7 @@ public class Dipendente {
 		return "Dipendente [nome=" + nome + ", matricola=" + matricola + "]";
 	}
 	
-	public double calcolaPaga() {
-		return 0;
-	}
+	public abstract double calcolaPaga();
 	
 	
 }
