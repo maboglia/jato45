@@ -1,4 +1,4 @@
-<h1><%= titolo %></h1>
+<h1>${titolo}</h1>
 <table>
   <tr>
     <th>Column 1 Heading</th>
