@@ -23,12 +23,16 @@ public class Panini extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	request.getRequestDispatcher("header.jsp").include(request, response);
+	
 	request.getRequestDispatcher("menu.jsp").include(request, response);
+	
 	request.setAttribute("titolo", "Panini");
 	ArrayList<String> panini = new ArrayList<>();
 	panini.add("hamburger");panini.add("cheeseburger");panini.add("fishburger");
 	request.setAttribute("prodotti", panini);
 	request.getRequestDispatcher("content.jsp").include(request, response);
+	
+	//chiamo la vista pié di pagina
 	request.getRequestDispatcher("footer.jsp").include(request, response);
 	
 	
