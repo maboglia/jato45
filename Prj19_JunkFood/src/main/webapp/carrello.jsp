@@ -5,7 +5,6 @@
   <tr>
     <th>Prodotto</th>
     <th>Prezzo</th>
-    <th>Azione</th>
   </tr>
   
   <% 
@@ -17,12 +16,6 @@
   <tr>
     <td><%= p.getNome() %></td>
     <td><%= p.getPrezzo() %></td>
-    <td>
-    	<form method="post" action="carrello">
-    		<input type="hidden" name="prodotto" value="<%= p.getNome() %>">
-    		<input type="submit" value="compra">
-    	</form>
-    </td>
   </tr>
   
   <% } %>

@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import database.Prodotti;
+import model.Panino;
+import model.Prodotto;
+
 /**
  * Servlet implementation class Panini
  */
@@ -27,8 +31,8 @@ public class Panini extends HttpServlet {
 	request.getRequestDispatcher("menu.jsp").include(request, response);
 	
 	request.setAttribute("titolo", "Panini");
-	ArrayList<String> panini = new ArrayList<>();
-	panini.add("hamburger");panini.add("cheeseburger");panini.add("fishburger");
+	ArrayList<Prodotto> panini = Prodotti.DB;
+		
 	request.setAttribute("prodotti", panini);
 	request.getRequestDispatcher("content.jsp").include(request, response);
 	
