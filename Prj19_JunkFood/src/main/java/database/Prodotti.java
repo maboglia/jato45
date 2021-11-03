@@ -13,7 +13,7 @@ public class Prodotti {
 		DB.add(new Panino("hamburger", 3.5));
 		DB.add(new Panino("cheeseburger", 4.5));
 		DB.add(new Panino("fishburger", 5.5));
-
+		
 //		DB.add(new Panino("hamburger", 3.5));
 //		DB.add(new Panino("cheeseburger", 4.5));
 //		DB.add(new Panino("fishburger", 5.5));	
@@ -21,6 +21,7 @@ public class Prodotti {
 	
 	public static Prodotto getProdottoByName(String name) {
 		for (Prodotto prodotto : DB) {
+			
 			if(prodotto.getNome().equals(name))
 				return prodotto;
 		}
