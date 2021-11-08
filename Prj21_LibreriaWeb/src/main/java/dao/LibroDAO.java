@@ -69,5 +69,36 @@ public class LibroDAO {   //Data Access Object
 		
 	}
 	
+	public void addLibro(Libro l) {
+		this.conn = database.connetti();
+		try {
+			this.stat = this.conn.createStatement();
+			this.stat.executeUpdate("insert into libro (titolo, prezzo, prezzo_iva ) values ("
+					+ "'"+l.getTitolo()+"', "+l.getPrezzo()+", 11)");
+			System.out.println("libro aggiunto");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
+	public void delLibro(Libro l) {
+		this.conn = database.connetti();
+		try {
+			this.stat = this.conn.createStatement();
+			this.stat.executeUpdate("delete from libro where id=" +l.getId());
+			System.out.println("libro eliminato");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}	
+	
+	public static void main(String[] args) {
+		Libro l = new Libro(31, "I promessi sposi", 10);
+		LibroDAO ld = new LibroDAO();
+		//ld.addLibro(l);
+		ld.delLibro(l);
+	}
+	
 }
