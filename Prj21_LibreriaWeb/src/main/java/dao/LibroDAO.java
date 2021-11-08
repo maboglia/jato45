@@ -43,5 +43,31 @@ public class LibroDAO {   //Data Access Object
 		return libri;
 	}
 	
+	public Libro getLibroById(int id) {
+		
+		Libro l = null;
+		this.conn = database.connetti();
+		try {
+			this.stat = this.conn.createStatement();
+			
+			this.rs = this.stat.executeQuery("select * from libro where id = " + id);
+			
+			this.rs.next();//mi sposto sul primo record dela query
+			
+			int idLibro = rs.getInt("id");
+			String titolo = rs.getString("titolo");
+			Double prezzo = rs.getDouble("prezzo");
+			
+			l = new Libro(idLibro, titolo, prezzo);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return l;
+		
+	}
+	
 
 }

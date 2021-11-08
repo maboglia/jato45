@@ -9,30 +9,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Libreria</h1>
+<h1>Scheda Libro</h1>
 
-<table>
+<%
+	int idLibro = 1;
+	if (request.getParameter("libroCercato") != null){
+		idLibro = Integer.parseInt(request.getParameter("libroCercato"));  ;
+	}
 
-	<%
-		LibroDAO ld = new LibroDAO();
-		for (Libro l :  ld.getLibri()){
-			%>
-			<tr>
-				<td>
-				<a href="dettaglio.jsp?libroCercato=<%= l.getId() %>">
-					<%= l.getTitolo() %>
-				</a>
-				
-				</td>
-			</tr>		
-			<%
-		}
-	
-	
-	%>
+	LibroDAO ld = new LibroDAO();
+	Libro l = ld.getLibroById(idLibro);
 
+	out.print(l);
+%>
 
-</table>
 
 </body>
 </html>
