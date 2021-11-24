@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Libreria</title>
+</head>
+<body>
+
+<h1>Libreria</h1>
+
+<ul id="lista"></ul>
+
+
+<script>
+    const lista = document.getElementById('lista');
+
+    const URL = "http://localhost:8080/api/libri";
+
+    //XHR XmlHttpRequest
+
+    //fetch
+    fetch(URL).then(documento => documento.json()).then(libri => {
+        for (const libro of libri) {
+            console.log(libro.titolo);
+            const li = document.createElement('li');
+            li.textContent = libro.titolo;
+            lista.appendChild(li);
+        }
+    } );
+
+    //arrow functions - elemento => console.log(elemento) 
+
+
+</script>
+
+</body>
+</html>
