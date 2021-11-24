@@ -1,6 +1,7 @@
 package com.bogliaccino.springlibreria01.integration;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ public class LibriRestCtrl {
 	private LibroService service;
 	
 	@GetMapping("")
-	public ArrayList<Libro> getLibri(){
+	public List<Libro> getLibri(){
 		return service.getLibri();
 	}
 	

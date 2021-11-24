@@ -14,19 +14,22 @@
 <script>
     const lista = document.getElementById('lista');
 
-    const URL = "http://localhost:8080/api/libri";
+    const URL = "http://localhost:9000/bookstore/api/libri";
 
     //XHR XmlHttpRequest
 
     //fetch
-    fetch(URL).then(documento => documento.json()).then(libri => {
-        for (const libro of libri) {
-            console.log(libro.titolo);
-            const li = document.createElement('li');
-            li.textContent = libro.titolo;
-            lista.appendChild(li);
-        }
-    } );
+    fetch(URL)
+        .then(documento => documento.json())
+        .then(libri => {
+                for (const libro of libri) {
+                    console.log(libro.titolo);
+                    const li = document.createElement('li');
+                    li.textContent = libro.titolo;
+                    lista.appendChild(li);
+                }
+            } 
+        );
 
     //arrow functions - elemento => console.log(elemento) 
 
