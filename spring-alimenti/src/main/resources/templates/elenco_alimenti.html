@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1 th:text="${titolo}"></h1>
+
+    <table>
+      <tr>
+        <th>categoria</th>
+        <th>prodotto</th>
+        <th>energia</th>
+      </tr>
+      <tr th:each="alimento : ${alimenti}">
+        <td th:text="${alimento.categoria}"></td>
+        <td th:text="${alimento.prodotto}"></td>
+        <td th:text="${alimento.energia}"></td>
+      </tr>
+    </table>
+
+</body>
+</html>
