@@ -1,6 +1,7 @@
 package com.bogliaccino.alimenti.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,14 +17,14 @@ public class AlimentoServiceImpl implements AlimentoService {
 	
 	@Override
 	public void addAlimento(Alimento a) {
-		// TODO Auto-generated method stub
+		repo.save(a);
 
 	}
 
 	@Override
-	public Alimento getAlimentoById(int id) {
+	public Optional<Alimento> getAlimentoById(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findById(id);
 	}
 
 	@Override
@@ -40,13 +41,12 @@ public class AlimentoServiceImpl implements AlimentoService {
 
 	@Override
 	public Alimento updAlimento(Alimento a) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.save(a);
 	}
 
 	@Override
 	public void deleteAlimentoById(int id) {
-		// TODO Auto-generated method stub
+		repo.deleteById(id);
 
 	}
 
