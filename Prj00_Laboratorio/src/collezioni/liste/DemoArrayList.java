@@ -2,11 +2,14 @@ package collezioni.liste;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class DemoArrayList {
 
 	public static void main(String[] args) {
-		ArrayList<String> giorni = new ArrayList<String>();
+		List<String> giorni = new ArrayList<String>();
+		List<String> giorni2 = new LinkedList<String>();
 		
 		giorni.add("lunedì");//0
 		giorni.add("martedì");
