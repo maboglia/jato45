@@ -1,5 +1,6 @@
 package com.bogliaccino.alimenti.integration;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,16 @@ public class AlimentiRest {
 	public List<Alimento> getAll(){
 		return this.service.getAlimenti();
 	}
+
+	@GetMapping("/ordina/energia")
+	@CrossOrigin
+	public List<Alimento> getAllByEnergia(){
+		List<Alimento> alimenti = this.service.getAlimenti();
+		Collections.sort(alimenti, (a1, a2) -> a1.getEnergia()-a2.getEnergia());
+		
+		return alimenti;
+	}
+		
 	
 	@CrossOrigin
 	@GetMapping("/{id}")
