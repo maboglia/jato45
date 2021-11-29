@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+    <ul id="elenco"></ul>
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>     -->
+<script>
+
+    //1 jquery o librerie simili (JS)
+//     $.getJSON( "http://localhost:9003/alimenti/api", function( data ) {
+//   const items = [];
+//   $.each( data, function( key, alimento ) {
+//     items.push( "<li id='" + key + "'>" + alimento.prodotto + "</li>" );
+//   });
+ 
+//   $( "<ul/>", {
+//     "class": "my-new-list",
+//     html: items.join( "" )
+//   }).appendTo( "body" );
+// });
+    //2 javascript XHR XMLHttpRequest
+
+//    const XHR = new XMLHttpRequest();
+    const URL = "http://localhost:9003/alimenti/api";
+    const LISTA = document.getElementById("elenco");
+
+    // XHR.onreadystatechange = function () {
+    //     console.log(XHR.readyState);
+
+    //     if (XHR.readyState === 4 ){//il server ha ritornato una response
+            
+    //         if (XHR.status === 200){//la chiamata è andata a buon fine e la response contiene qualcosa
+    //             const oggettoJS = JSON.parse(XHR.responseText);
+
+    //             for (const alimento of oggettoJS) {
+    //                 console.log(alimento.prodotto);
+    //                 const li = document.createElement("li");
+    //                 const testo = document.createTextNode(alimento.prodotto);
+    //                 li.appendChild(testo);
+    //                 LISTA.appendChild(li);
+    //             }
+
+    //         } else 
+    //         {
+    //             console.log("ERRRRRRRRRORRRRRRRRREEEEEEE");
+    //         }
+
+
+    //     }
+    // }
+
+    // XHR.open("GET", URL);
+    // XHR.send();
+
+
+
+
+    
+    //3 javascript fetch - vanilla javascript
+        fetch(URL).then(r => r.json()).then(alimenti => {
+            for (const alimento of alimenti) {
+                const li = document.createElement("li");
+                const testo = document.createTextNode(alimento.prodotto);
+                li.appendChild(testo);
+                LISTA.appendChild(li);
+            }
+        });
+
+
+</script>
+
+
+</body>
+</html>
