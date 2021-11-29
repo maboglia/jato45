@@ -67,10 +67,18 @@
             for (const alimento of alimenti) {
                 const li = document.createElement("li");
                 const testo = document.createTextNode(alimento.prodotto);
+             
+                li.setAttribute("alimento", alimento);
+                li.addEventListener("click", mostra);
                 li.appendChild(testo);
                 LISTA.appendChild(li);
             }
         });
+
+        function mostra() {
+            console.log(this);
+        }
+
 
 
 </script>
