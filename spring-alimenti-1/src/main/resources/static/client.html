@@ -6,7 +6,12 @@
 </head>
 <body>
 
+	<div id="scheda">
+		
+	
+	</div>
     <ul id="elenco"></ul>
+    
 
 
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>     -->
@@ -29,6 +34,7 @@
 //    const XHR = new XMLHttpRequest();
     const URL = "http://localhost:9003/alimenti/api";
     const LISTA = document.getElementById("elenco");
+    const SCHEDA = document.getElementById("scheda");
 
     // XHR.onreadystatechange = function () {
     //     console.log(XHR.readyState);
@@ -59,16 +65,13 @@
     // XHR.send();
 
 
-
-
-    
     //3 javascript fetch - vanilla javascript
         fetch(URL).then(r => r.json()).then(alimenti => {
             for (const alimento of alimenti) {
                 const li = document.createElement("li");
                 const testo = document.createTextNode(alimento.prodotto);
              
-                li.setAttribute("alimento", alimento);
+                li.setAttribute("alimento", alimento.id);
                 li.addEventListener("click", mostra);
                 li.appendChild(testo);
                 LISTA.appendChild(li);
@@ -76,7 +79,17 @@
         });
 
         function mostra() {
-            console.log(this);
+            console.log(this.getAttribute("alimento"));
+        	fetch(URL + "/" + this.getAttribute("alimento"))
+        		.then(r => r.json())
+        		.then(a => {
+        			console.log(a);
+        			SCHEDA.innerHTML = "";
+        			SCHEDA.innerHTML = "<h1>" + a.categoria + "</h1>";
+        			SCHEDA.innerHTML += "<h2>" + a.prodotto + "</h2>";
+        			SCHEDA.innerHTML += "<p>" + a.proteine + "</p>";
+        			SCHEDA.innerHTML += "<h3>" + a.energia + "</h3>";
+        		})
         }
 
 
