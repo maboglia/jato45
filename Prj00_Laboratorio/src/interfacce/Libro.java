@@ -4,6 +4,15 @@ public class Libro implements Comparable<Libro> {
 
 	private String titolo, autore;
 	private int pagine, prezzo;
+	
+	public Libro(String titolo) {
+		this.titolo = titolo;
+		this.autore = titolo.substring(0, 4).toUpperCase();
+		this.pagine = titolo.length();
+		this.prezzo = titolo.length();
+		
+	}
+	
 	/**
 	 * @param titolo
 	 * @param autore
