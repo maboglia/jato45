@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popolazione</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="row">
+
+            <div id="regioni" class="col-3"></div>
+            <div id="dettaglio" class="col-9"></div>
+            
+        </div>
+    </div>
+
+
+<script>
+
+    const URL_REGIONI = "http://localhost:9004/popolazione/api/elenco/regioni"; 
+    const URL_REGIONE = "http://localhost:9004/popolazione/api/"; 
+
+    const elencoRegioni = document.getElementById("regioni");
+    const schedaRegione = document.getElementById("dettaglio");
+
+    fetch(URL_REGIONI)
+                    .then(json => json.json())
+                    .then(elenco => {
+                       let output = '<ul class="list-group">';
+                        for (const regione of elenco) {
+                            output += '<li class="list-group-item"><button class="btn btn-small" onclick=trovaRegione("' + regione + '")>' + regione + '</button></li>';
+                        }
+                        output += '</ul>';
+                        elencoRegioni.innerHTML = "";
+                        elencoRegioni.innerHTML = output;
+
+                    });
+    
+
+    function trovaRegione(regione) {
+        fetch(URL_REGIONE + regione)
+                    .then(json => json.json())
+                    .then(elenco => {
+                       let output = '<div>';
+                        for (const provincia of elenco) {
+                        	output += '<div class="card" style="width: 18rem;">';
+                        	output += '  <img src="https://picsum.photos/300/150" class="card-img-top" alt="...">';
+                        	output += '  <div class="card-body">';
+                        	output += '    <h5 class="card-title">' + provincia.comune + '</h5>';
+                        	output += '    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>';
+                        	output += '    <a href="#" class="btn btn-primary">Go somewhere</a>';
+                        	output += '  </div>';
+                        	output += '</div>';
+                            
+                        }
+                        output += '</div>';
+                        schedaRegione.innerHTML = "";
+                        schedaRegione.innerHTML = output;
+
+                    });
+    
+   
+    }
+
+</script>
+
+</body>
+</html>
