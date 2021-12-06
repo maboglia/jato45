@@ -21,7 +21,7 @@ public class Ricetta {
 	@JoinColumn(name = "id_paese")
 	private Paese paese;
 	private String nome;
-	private List<String> ingredienti;
+	private String ingredienti;
 	
 	
 	public int getId() {
@@ -43,13 +43,13 @@ public class Ricetta {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public List<String> getIngredienti() {
+	public String getIngredienti() {
 		return ingredienti;
 	}
-	public void setIngredienti(List<String> ingredienti) {
+	public void setIngredienti(String ingredienti) {
 		this.ingredienti = ingredienti;
 	}
-	
+
 	
 	
 	
