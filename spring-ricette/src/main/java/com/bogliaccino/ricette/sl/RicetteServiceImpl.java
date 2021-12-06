@@ -9,7 +9,7 @@ import com.bogliaccino.ricette.dal.RicettaDAO;
 import com.bogliaccino.ricette.entities.Ricetta;
 
 @Service
-public class RicetteServiceImpl implements RicetteService {
+public class RicetteServiceImpl implements RicetteService{
 
 	@Autowired
 	private RicettaDAO repo;
