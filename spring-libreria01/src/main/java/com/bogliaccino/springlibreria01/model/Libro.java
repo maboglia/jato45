@@ -20,7 +20,7 @@ public class Libro {
 	private int editoreId;
 	
 	
-public Libro() {}
+	public Libro() {}
 	
 	
 	
