@@ -24,7 +24,7 @@ public class CanzoniServiceImpl implements CanzoniService {
 	@Override
 	public List<Canzone> getCanzoni() {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override

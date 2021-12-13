@@ -24,7 +24,7 @@ public class CantanteServiceImpl implements CantanteService {
 	@Override
 	public List<Cantante> getCantanti() {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
