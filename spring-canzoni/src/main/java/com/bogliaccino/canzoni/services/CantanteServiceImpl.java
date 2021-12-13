@@ -45,4 +45,16 @@ public class CantanteServiceImpl implements CantanteService {
 
 	}
 
+	@Override
+	public List<Cantante> getCantantiStartingFor(String prefix) {
+		// TODO Auto-generated method stub
+		return repo.findByNomeStartingWith(prefix);
+	}
+
+	@Override
+	public List<Cantante> getCantantiContatining(String prefix) {
+		// TODO Auto-generated method stub
+		return repo.findByNomeContaining(prefix);
+	}
+
 }
