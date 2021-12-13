@@ -42,7 +42,8 @@ public class Lampadina {
 		if (this.click < this.clickMax) {
 			this.accesa = !this.accesa;
 			this.click++;
-		} {
+		} else 
+		{
 			this.rotta = true;
 		}
 	}

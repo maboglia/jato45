@@ -13,9 +13,6 @@ import javafx.scene.layout.VBox;
 
 public class Main extends Application {
 	
-	
-	
-	
 	@Override
 	public void start(Stage primaryStage) {
 		Lampadina l = new Lampadina(5);
@@ -38,8 +35,10 @@ public class Main extends Application {
 			}
 			
 			if (l.isAccesa()) {
+				btn.setText("accendi");
 				iv.setImage(lamp_off);
 			} else {
+				btn.setText("spegni");
 				iv.setImage(lamp_on);
 			}
 			
@@ -51,8 +50,9 @@ public class Main extends Application {
 			BorderPane root = new BorderPane();
 			VBox vb = new VBox();
 			vb.getChildren().add(iv);
-			vb.getChildren().add(btn);
+			//vb.getChildren().add(btn);
 			
+			root.setLeft(btn);
 			root.setCenter(vb);
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
