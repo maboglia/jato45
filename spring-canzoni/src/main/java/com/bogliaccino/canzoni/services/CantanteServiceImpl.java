@@ -57,4 +57,12 @@ public class CantanteServiceImpl implements CantanteService {
 		return repo.findByNomeContaining(prefix);
 	}
 
+	@Override
+	public Cantante getCantanteByNome(String nome) {
+		
+		return repo.findByNome(nome).size() > 0 ? 
+				repo.findByNome(nome).get(0) : 
+					null;
+	}
+
 }

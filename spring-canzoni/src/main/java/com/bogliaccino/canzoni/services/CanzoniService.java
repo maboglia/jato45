@@ -9,7 +9,10 @@ public interface CanzoniService {
 
 	Canzone getCanzone(int id);
 	List<Canzone> getCanzoni();
+	List<Canzone> getCanzoniByCantante(String nome);
 
+	
+	
 	void addCanzone(Canzone c);
 	void updCanzone(Canzone c);
 	void delCanzone(int id);

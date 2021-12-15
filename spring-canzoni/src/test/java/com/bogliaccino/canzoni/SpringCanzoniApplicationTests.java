@@ -37,8 +37,17 @@ class SpringCanzoniApplicationTests {
 	}
 
 	private Cantante caricaDati(String titolo, String nome) {
-		Cantante c = new Cantante();
-		c.setNome(nome);
+		
+		Cantante c = null;
+		
+		if (this.service.getCantanteByNome(nome)!=null) {
+			c = this.service.getCantanteByNome(nome);
+		} else {
+			c = new Cantante();
+			c.setNome(nome);
+		}
+		
+		
 		this.service.addCantante(c);
 		
 		Canzone cnz = new Canzone();

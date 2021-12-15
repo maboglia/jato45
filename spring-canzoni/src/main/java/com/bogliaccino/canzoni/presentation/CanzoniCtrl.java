@@ -47,4 +47,13 @@ public class CanzoniCtrl {
 		
 		return "canzoni";
 	}	
+	@GetMapping("canzoni/{autore}")
+	public String getCanzoniByAutore(@PathVariable String autore , Model model) {
+		
+		model.addAttribute("titolo", "canzoni");
+		model.addAttribute("canzoni", serviceCanzoni.getCanzoniByCantante(autore));
+		
+		return "canzoni";
+	}	
+
 }

@@ -7,6 +7,8 @@ import com.bogliaccino.canzoni.entities.Cantante;
 public interface CantanteService {
 
 	Cantante getCantante(int id);
+	Cantante getCantanteByNome(String nome);
+	
 	List<Cantante> getCantanti();
 	
 	List<Cantante> getCantantiStartingFor(String prefix);
